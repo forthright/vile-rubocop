@@ -1,9 +1,6 @@
-@brentlintner/vile-rubocop
-------------
+# vile-rubocop
 
-[![NPM version](https://badge.fury.io/js/vile-rubocop.svg)](http://badge.fury.io/js/vile-rubocop)
-
-A [vile](http://vile.io) plugin for rubocop.
+A [vile](http://vile.io) plugin for [rubocop](https://github.com/bbatsov/rubocop).
 
 ## Requirements
 
