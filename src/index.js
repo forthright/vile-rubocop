@@ -1,5 +1,5 @@
 let _ = require("lodash")
-let vile = require("@brentlintner/vile")
+let vile = require("@forthright/vile")
 
 const RC_SEVERITY = {
   REFACTOR: "refactor",
