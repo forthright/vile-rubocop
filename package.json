@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-rubocop",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A vile plugin for rubocop.",
   "main": "lib/index.js",
   "files": [
