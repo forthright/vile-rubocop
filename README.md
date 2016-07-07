@@ -21,6 +21,34 @@ Example:
 
 Note: A good strategy is to use [bundler](http://bundler.io).
 
+## Config
+
+You can pass a custom config vile path `-c ...` as so:
+
+```yaml
+rubocop:
+  config: "another.rubocop.yml"
+```
+
+## Ignoring Files
+
+For now, ignoring is only supported via `rubocop.yml`
+
+## Allowing Files
+
+You can set `vile.allow` or `rubocop.allow` and this plugin will honour it.
+
+Example:
+
+```yaml
+rubocop:
+  allow:
+    - app
+    - spec
+```
+
+You can still specify included paths the normal Rubocop way, via `.rubocop.yml`.
+
 ## Architecture
 
 This project is currently written in JavaScript. Rubocop provides

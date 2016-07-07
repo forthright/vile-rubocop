@@ -11,7 +11,7 @@ const RC_SEVERITY = {
 
 // TODO: support custom ignoring (with is_not_ignored)
 
-let rubocop = (custom_config_path) => {
+let rubocop = (custom_config_path, allowed_paths) => {
   let opts = {}
 
   if (custom_config_path) {
@@ -20,7 +20,9 @@ let rubocop = (custom_config_path) => {
 
   opts.args = _.reduce(opts, (arr, option, name) => {
     return arr.concat([`-${name}`, option])
-  }, []).concat([".", "--format", "json", "--rails"])
+  }, [])
+  .concat(allowed_paths)
+  .concat(["--format", "json", "--rails"])
 
   return vile
     .spawn("rubocop", opts)
@@ -68,9 +70,12 @@ let into_issues = (rc_json) =>
 
 // TODO: support toggling stuff like --rails
 
-let punish = (plugin_config) =>
-  rubocop(_.get(plugin_config, "config"))
+let punish = (plugin_config) => {
+  let allow = _.get(plugin_config, "allow", ["."])
+  let config_path = _.get(plugin_config, "config")
+  rubocop(config_path, allow)
     .then((rc_json) => into_issues(rc_json))
+}
 
 module.exports = {
   punish: punish
