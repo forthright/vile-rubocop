@@ -73,7 +73,7 @@ let into_issues = (rc_json) =>
 let punish = (plugin_config) => {
   let allow = _.get(plugin_config, "allow", ["."])
   let config_path = _.get(plugin_config, "config")
-  rubocop(config_path, allow)
+  return rubocop(config_path, allow)
     .then((rc_json) => into_issues(rc_json))
 }
 
