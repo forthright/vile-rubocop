@@ -26,8 +26,10 @@ let rubocop = (custom_config_path, allowed_paths) => {
 
   return vile
     .spawn("rubocop", opts)
-    .then((stdout) => stdout ?
-          JSON.parse(stdout) : { files: [] })
+    .then((spawn_data) => {
+      let stdout = _.get(spawn_data, "stdout")
+      return stdout ?  JSON.parse(stdout) : { files: [] }
+    })
 }
 
 let to_issue_type = (severity) => {
