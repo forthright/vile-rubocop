@@ -35,9 +35,6 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "vile": ">=0.13.0",
-    "vile-git": "^0.5.1",
-    "vile-stat": "0.0.14",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
