@@ -1,14 +1,12 @@
 # vile-rubocop
 
-A [vile](http://vile.io) plugin for [rubocop](https://github.com/bbatsov/rubocop).
+A [Vile](http://vile.io) plugin for identifying common style and
+maintainability issues in your Ruby code (via [Rubocop](https://github.com/bbatsov/rubocop)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
-- [ruby](http://nodejs.org)
-- [rubygems](http://rubygems.org)
-- [rubocop](http://github.com/bbatsov/rubocop)
+- [Node.js](http://nodejs.org)
+- [Ruby](https://www.ruby-lang.org)
 
 ## Installation
 
@@ -19,7 +17,7 @@ Example:
     npm i -D vile vile-rubocop
     gem install rubocop
 
-Note: A good strategy is to use [bundler](http://bundler.io).
+Note: A good strategy is to use [Bundler](http://bundler.io).
 
 ## Config
 
@@ -51,7 +49,7 @@ You can still specify included paths the normal Rubocop way, via `.rubocop.yml`.
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -78,8 +76,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -93,10 +89,10 @@ a JSON CLI output that is currently used until a more ideal
 IPC option is implemented.
 
 - `bin` houses any shell based scripts
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-rubocop
     npm install
