@@ -30,7 +30,18 @@ rubocop:
 
 ## Ignoring Files
 
-For now, ignoring is only supported via `rubocop.yml`
+For now, ignoring is only supported via `.rubocop.yml`
+
+Suggested config (as `node_modules` can be traversed):
+
+```yaml
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+```
 
 ## Allowing Files
 
